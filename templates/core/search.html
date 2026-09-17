@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<p>Resultados para “{{ q }}”</p>{% for group in groups %}<section class="panel"><h2>{{ group.title }}</h2>{% for i in group.items %}<p><a href="{{ i.url }}">{{ i.label }}</a></p>{% empty %}<p class="text-muted">Nenhum resultado.</p>{% endfor %}</section>{% endfor %}{% endblock %}
